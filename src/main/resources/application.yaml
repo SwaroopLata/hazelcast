@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+
+hazelcast:
+  cache:
+    instance-name: hazelcast-instance
+  map:
+    map1:
+      time-to-live-seconds: 90
+      max-idle-seconds: 1000
+      eviction:
+        eviction-policy: LRU
+        max-size-policy: USED_HEAP_PERCENTAGE
+        size: 10
+    map2:
+      time-to-live-seconds: 100
+      max-idle-seconds: 1200
+      eviction:
+        eviction-policy: LRU
+        max-size-policy: USED_HEAP_PERCENTAGE
+        size: 10
+
